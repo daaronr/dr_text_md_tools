@@ -1,0 +1,24 @@
+ #Text manipulation aliases
+
+alias catt='cat *.txt > notes_"${PWD##*/}".md'
+alias catt2='cat *.txt > notes_"${PWD##*/}".md && rm *.txt'
+
+#rename .md as .Rmd, recursive
+#alias mdasrmd='find . -name '*.md' -exec rename 's/\.md$/.Rmd/' '{}' \;'
+
+#alias doc2rmd='bash /Users/yosemite/githubs/dr_text_md_tools/pandoc-docx-Rmd.sh' #doesn't work
+
+#convert docx to Rmd  (md... but with Rmd label) in folder
+#alias doc2md "for file in $(ls *.docx); do pandoc -f doc  -t markdown '${file}' -o '${file%docx}Rmd'; done"
+
+#...recursive (note - the quotes aren't working here)
+#alias doc2md_r "find ./ -iname '*.docx'  -exec sh -c 'pandoc "${0}" -o '${0%.docx}.Rmd'' {} \;"
+
+#convert md to pdf in folder, recursive
+#alias mdtopdf_r "find ./ -iname '*.md' -type f -exec sh -c 'pandoc '${0}' -o '${0%.md}.pdf'' {} \;"
+
+
+#File and folder manip aliases
+
+#alias rm_r 'bash ~/githubs/dr_text_md_tools/remove_recurse.sh' #not sure why it's not working
+

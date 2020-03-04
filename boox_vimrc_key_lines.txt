@@ -1,0 +1,44 @@
+"""FORMAT CHANGE WORK
+"""SOURCE booxtomd to clean a boox comments file
+:nmap b2md :source /Users/yosemite/githubs/dr_text_md_tools/booxtomd.vim
+
+"""MD Tex for pdf to RMD for bookdown html
+nmap md2bdh :source /Users/yosemite/githubs/dr_text_md_tools/md_tex_to_rmd_html.vim
+
+"""MD TEX for PDF/Beamer TO RMD for REVEALJS slides
+:nmap md2rv :source /Users/yosemite/githubs/dr_text_md_tools/md_tex_to_rmd_revealjs.vim
+
+"""revealjs markdown to bookdown 'book chapter' format
+:nmap rv2bk :source /Users/yosemite/githubs/dr_text_md_tools/reveal_2_bookdown.vim
+
+"""BOOX elements
+"Concat boox .txt files in current folder
+:nmap -ct :!cat *.txt > DR_notes.txt
+
+"***Esp for work on boox export
+"Delete duplicates except blank linkes
+:nnoremap -rmDD :DeleteDuplicateLinesIgnoring [-*]
+:nnoremap -rmDW :DeleteDuplicateLinesIgnoring  [^$\s\+]
+
+"remove loads of unicode and crap line breaks (need to add again?)
+:nnoremap -rmU :%s/[^[:print:]]//g
+
+"replace other weird characters with a dash
+:nnoremap -rmQ :%s/[^\x00-\x7F]/-/g
+
+"other crappy accented weirdness
+:nnoremap -rmA %s/{\\'{\(.\)}}/\1/g
+"
+
+"replace 4+ dashes with a single space
+:nnoremap -rmd :%s/-\{4,}/ /
+
+:nnoremap -rmM :%s//\r/g
+
+"remove 2+ blank lines in a row
+:nnoremap -rmbb :%s/^\n\{3,}/\r\r/
+
+"remove 1+ blank lines in a row
+:nnoremap -rmBB :%s/^\n\{2,}/\r/
+
+
