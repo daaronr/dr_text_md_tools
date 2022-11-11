@@ -1,0 +1,235 @@
+[[AdvancedFormat]]
+
+[[Block::Look I'm the first block and I have a name!]]
+
+[[Question:Text]]
+I'm just a bunch of text.
+Another line.
+
+Another line with an extra line break.
+
+[[PageBreak]]
+
+[[Block]]
+
+[[Question:Matrix]]
+[[ID:matrix_question]]
+
+Above, a page break, and a block. This is a 'question:matrix' with a list of 5 choices followed by a list of 7 'Answers'.
+We also specified 'ID:matrix_question'. I guess that variable name will go into the data?
+
+Before proceeding to view the hypothetical advertisement, please answer these personality questions.Here are a number of personality traits that may or may not apply to you. Please write a number next to each statement to indicate the extent to which you agree or disagree with that statement. You should rate the extent to which the pair of traits applies to you, even if one characteristic applies more strongly than the other.
+[[Choices]]
+Extraverted- enthusiastic.
+Critical- quarrelsome.
+Dependable- self-disciplined.
+Anxious- easily upset.
+Open to new experiences- complex.
+[[Answers]]
+Disagree strongly
+Disagree moderately
+Disagree a little
+Neither agree nor disagree
+Agree a little
+Agree moderately
+Agree strongly
+
+[[Block]]
+
+[[Question:Matrix]]
+​​ Another 'question:matrix' To what extent do you agree or disagree with the following statements?
+[[Choices]]
+As long as my and my family’s basic material needs are covered, I want to use a significant amount of my resources (e.g., money or time) to improve the world.
+I am willing to make significant sacrifices for people in need that I don’t know and will never meet.
+People in wealthy countries should donate a substantial proportion of their income to make the world a better place.
+I would make a career change if it meant that I could improve the lives of people in need.
+We should put a lot of emphasis on the well-being of people who will live thousands of years from now, even relative to the well-being of people who live today.
+From a moral perspective, the suffering of all beings matters roughly the same, no matter to what species they belong to.
+[[Answers]]
+1- Strongly disagree
+2-
+3-
+4-
+5-
+6-
+7- Strongly agree
+
+[[PageBreak]]
+
+[[Block]]
+
+[[Question:Text]]
+
+A page break, a block, some more 'Question:Text'
+
+[[Block]]
+
+[[Question:Text]]
+
+
+A page break, a block, some more 'Question:Text'
+
+[[Question:Text]]
+
+More question test in the previous 'Block'.
+
+Oh, and everything they provide is free, forever. They’re a nonprofit, and their only aim is to help you find a fulfilling career that does good.
+
+A footnote below?
+
+[1] William H. Desvousges et al., Measuring Nonuse Damages Using Contingent Valuation: An Experimental Evaluation of Accuracy, technical report (Research Triangle Park, NC: RTI International, 2010).
+
+[[PageBreak]]
+
+
+[[Question:Text]]
+
+Here I put in a page break but no new block. I wonder what that will do?
+
+
+[[Block]]
+
+[[Question:MC:Select]]
+
+Here is a multiple choice question ('Question:MC:Select')
+
+[[Choices]]
+USA
+UK
+Other
+
+[[Block]]
+
+[[Question:MC:Select]]
+Another mcq.
+[[Choices]]
+Yes
+No
+
+
+
+[[Question:MC:Select]]
+An MCQ within the previous block?
+[[Choices]]
+Male
+Female
+Other
+
+[[Block]]
+
+[[Question:MC:Dropdown]]
+A new type of question: 'Question:MC:Dropdown'
+[[Choices]]
+Younger than 18
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+Don't trust me, I'm over 30!
+
+[[Block]]
+
+[[Question:MC:MultiSelect]]
+A multiselect question ('Question:MC:MultiSelect')
+[[Choices]]
+choice a
+choice b
+choice c
+
+[[Block]]
+[[Block]]
+[[Question:MC:SingleAnswer:Horizontal]]
+A single answer horizontal question ('Question:MC:SingleAnswer:Horizontal')
+[[Choices]]
+choice a
+choice b
+choice c
+
+
+[[PageBreak]]
+
+[[Block]]
+
+[[Question:Text]]
+
+Now some really fancy stuff.
+
+[[Question:TE:Form]]
+'Question:TE:Form'
+
+This is a form question. Please fill out the following information:
+[[Choices]]
+First Name
+Last Name
+
+[[Block]]
+
+[[Question:MC]]
+[[ID:q1]]
+This is a multiple choice question. With one value recoded. (it says 'Choice:99')/
+
+
+[[AdvancedChoices]]
+[[Choice]]
+choice a
+with text on
+multiple lines
+[[Choice]]
+choice b
+[[Choice]]
+choice c
+[[Choice:99]]
+N/A with recode 99
+
+[[PageBreak]]
+
+[[Question:Matrix]]
+This question is a matrix question.
+
+It has lots of question text on multiple lines and uses
+advanced answers.
+
+[[Choices]]
+statement a
+statement b
+statement c
+[[AdvancedAnswers]]
+[[Answer]]
+answer 1
+[[Answer]]
+answer 2
+[[Answer]]
+answer 3
+
+[[PageBreak]]
+
+[[Question:Matrix]]
+This question is a matrix question and uses advanced choices and
+answers with recode values.
+
+[[AdvancedChoices]]
+[[Choice]]
+choice a
+[[Choice]]
+choice b
+[[Choice]]
+choice c
+[[Choice]]
+choice d
+
+[[AdvancedAnswers]]
+[[Answer:10]]
+answer 1 - recode 10
+[[Answer:20]]
+answer 2 - recode 20
+[[Answer:30]]
+answer 3 - recode 30
