@@ -8,9 +8,10 @@ def find_and_convert_files(directory):
     for root, _, files in os.walk(directory):
         for file in files:
             print(f"Checking file: {file}")
-            if file.endswith(('.docx', '.tex', '.ppt', '.pptx')):
+            if file.endswith(('.docx', '.tex', '.pptx')):
                 input_file_path = os.path.join(root, file)
-                output_file_path = os.path.splitext(input_file_path)[0] + '.md'
+                output_file_name = os.path.splitext(file)[0].replace(' ', '_') + '.md'
+                output_file_path = os.path.join(root, output_file_name)
                 command = f'pandoc -s "{input_file_path}" -t markdown -o "{output_file_path}"'
                 try:
                     subprocess.run(command, shell=True, check=True)
@@ -22,10 +23,11 @@ def find_and_convert_files(directory):
 # Main function
 def main():
     parser = argparse.ArgumentParser(description='Convert files to Markdown format.')
-    parser.add_argument('directory', type=str, help='The directory to search for files')
+    parser.add_argument('directories', type=str, nargs='*', help='The directories to search for files')
     args = parser.parse_args()
 
-    find_and_convert_files(args.directory)
+    for directory in args.directories:
+        find_and_convert_files(directory)
 
 if __name__ == '__main__':
     main()
