@@ -35,3 +35,9 @@ vignettes/*.pdf
 *.utf8.md
 *.knit.md
 textswappingwork/
+# secrets (added by leak-audit remediation 2026-06-03)
+client_secret*.json
+**/client_secret*.json
+token.json
+*.secret.json
+.env
